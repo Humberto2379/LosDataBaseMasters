@@ -1,0 +1,13 @@
+--The following code was used to generates the tables for the phase 1:
+
+
+
+CREATE TABLE Login(lid serial, eid int, username varchar(30),password varchar(30))
+CREATE TABLE Employee(eid serial, hid int, fname varchar(30),lname varchar (30),age int,position varchar(30),salary float);
+CREATE TABLE Chains(chid serial, cname varchar(30), springmkup float,summermkup float, fallmkup float, winternkup float);
+CREATE TABLE Hotel(hid serial, chid int, hname varchar(30),hcity varchar(30));
+CREATE TABLE RoomDescription(rdid serial, rname varchar(30), rtype varchar(30), capacity int, ishandicap boolean);
+CREATE TABLE CLIENT(clid serial, fname varchar(30),lname varchar(30),age int, memberyear int);
+CREATE TABLE Room(rid serial, hid int, rdid int, rprice float);
+CREATE TABLE Reserve(reid serial , ruid int, clid int, total_cost float, payment varchar(30),guest int);
+CREATE TABLE RoomUnavailable(ruid serial, rid int, startdate date, endate date);
